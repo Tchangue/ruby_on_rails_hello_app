@@ -4,9 +4,10 @@ class StaticPagesController < ApplicationController
   def help
   end
   def about
-    render
   end
   def login
+  end
+  def signup
   end
   def contact
   end
