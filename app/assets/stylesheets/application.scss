@@ -19,6 +19,13 @@
 
 $gray-medium-light: #eaeaea;
 
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
 /* universal */
 
 body {
@@ -35,6 +42,7 @@ textarea {
 
 .center {
   text-align: center;
+
   h1 {
     margin-bottom: 10px;
   }
@@ -79,6 +87,7 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+
   &:hover {
     color: white;
     text-decoration: none;
@@ -92,25 +101,29 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
+
   a {
     color: $gray;
+
     &:hover {
       color: $gray-darker;
     }
   }
+
   small {
     float: left;
   }
+
   ul {
     float: right;
     list-style: none;
+
     li {
       float: left;
       margin-left: 15px;
     }
   }
 }
-
 
 
 body {
@@ -127,7 +140,7 @@ body {
   padding: 15px 35px 45px;
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   .form-signin-heading,
   .checkbox {
@@ -143,8 +156,7 @@ body {
     font-size: 16px;
     height: auto;
     padding: 10px;
-    @include box-sizing(border-box);
-
+    @include box_sizing;
     &:focus {
       z-index: 2;
     }
@@ -167,10 +179,12 @@ body {
 .section-padding {
   padding: 45px 0;
 }
+
 .section-dark {
   background-color: #f9f9f9;
   z-index: -2;
 }
+
 .form-control,
 .form-group .form-control {
   border: 0;
@@ -353,7 +367,7 @@ fieldset[disabled] .form-group .form-control {
   resize: none
 }
 
-.form-group textarea~.form-control-highlight {
+.form-group textarea ~ .form-control-highlight {
   margin-top: -11px
 }
 
@@ -363,7 +377,7 @@ fieldset[disabled] .form-group .form-control {
   appearance: none
 }
 
-.form-group select~.material-input:after {
+.form-group select ~ .material-input:after {
   display: none
 }
 
@@ -391,6 +405,7 @@ fieldset[disabled] .form-group .form-control {
   color: #BDBDBD;
   font-weight: 400
 }
+
 .checkbox label,
 .radio label,
 label {
@@ -479,7 +494,7 @@ label.control-label {
   line-height: 1.07142857
 }
 
-.form-group.label-floating input.form-control:-webkit-autofill~label.control-label label.control-label {
+.form-group.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
   top: -30px;
   left: 0;
   font-size: 12px;
@@ -553,7 +568,7 @@ label.control-label {
   line-height: 1.125
 }
 
-.form-group.form-group-sm.label-floating input.form-control:-webkit-autofill~label.control-label label.control-label {
+.form-group.form-group-sm.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
   top: -25px;
   left: 0;
   font-size: 9px;
@@ -627,7 +642,7 @@ label.control-label {
   line-height: .99999998
 }
 
-.form-group.form-group-lg.label-floating input.form-control:-webkit-autofill~label.control-label label.control-label {
+.form-group.form-group-lg.label-floating input.form-control:-webkit-autofill ~ label.control-label label.control-label {
   top: -32px;
   left: 0;
   font-size: 14px;
@@ -684,6 +699,7 @@ select.form-control[multiple] {
   height: 100%;
   z-index: 100
 }
+
 .contact-widget-section .single-contact-widget {
   background: #f9f9f9;
   padding: 20px 25px;
@@ -729,3 +745,63 @@ select.form-control[multiple] {
 }
 
 
+// DEBUG
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
