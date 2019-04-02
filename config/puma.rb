@@ -4,7 +4,7 @@
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum; this matches the default thread size of Active Record.
 #
-workers Integer(ENV['WEB_CONCURRENCY'] || 2)
+#workers Integer(ENV['WEB_CONCURRENCY'] || 2)
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
 
@@ -54,7 +54,7 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # cannot share connections between processes.
 #
 on_worker_boot do
- #  ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
+  ActiveRecord::Base.establish_connection  #if defined?(ActiveRecord)
 end
 #
 
