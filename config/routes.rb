@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get '/help', to: 'static_pages#help', as: 'help'
   get '/about', to: 'static_pages#about', as: 'about'
-  get '/login', to: 'static_pages#login', as: 'login'
+  get '/login', to: 'users#login', as: 'login'
   get '/contact', to: 'static_pages#contact', as: 'contact'
-  get '/signup', to: 'users#new'
+  get '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
   resources :users
 

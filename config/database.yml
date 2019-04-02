@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: ruby_on_rails_hello_app_production
-  username: mauricej
+  database: bayano-rails-tutorial-hello_production
+  username: bayano-rails-tutorial-hello
   password: <%= ENV['RUBY_ON_RAILS_HELLO_APP_DATABASE_PASSWORD'] %>
