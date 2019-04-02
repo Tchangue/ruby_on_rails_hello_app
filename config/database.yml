@@ -85,4 +85,4 @@ production:
   <<: *default
   database: bayano-rails-tutorial-hello_production
   username: bayano-rails-tutorial-hello
-  password: <%= ENV['RUBY_ON_RAILS_HELLO_APP_DATABASE_PASSWORD'] %>
+  password: <%= ENV['BAYANO_RAILS_TUTORIAL_HELLO_DATABASE_PASSWORD'] %>
