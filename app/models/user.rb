@@ -7,7 +7,7 @@ class User < ApplicationRecord
             format: {with: VALID_EMAIL_REGEX},
             uniqueness: {case_sensitive: false})
   has_secure_password
-  validates(:password, presence: true, length: {maximum: 10})
+  validates(:password, presence: true, length: {maximum: 10}, allow_nil: true)
 
   class << self
     # Returns the hash digest of the given string.
