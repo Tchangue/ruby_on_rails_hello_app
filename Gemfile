@@ -33,7 +33,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~>3.1.11', platforms: :ruby
+gem 'bcrypt', '~>3.1.11', platforms: [:ruby, :x64_mingw]
+# faker
+gem 'faker', '1.7.3'
+
+#paginate
+gem 'will_paginate',           '3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
 
 
 # Use Capistrano for deployment
@@ -45,17 +51,17 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'bcrypt', '~>3.1.11', platforms: [:ruby, :x64_mingw]
 
 end
 
 
 group :test do
   gem 'rails-controller-testing', '1.0.2'
-  gem 'minitest',                 '5.10.3'
-  gem 'minitest-reporters',       '1.1.14'
-  gem 'guard',                    '2.13.0'
-  gem 'guard-minitest',           '2.4.4'
-  gem 'bcrypt', '~>3.1.11'
+  gem 'minitest', '5.10.3'
+  gem 'minitest-reporters', '1.1.14'
+  gem 'guard', '2.13.0'
+  gem 'guard-minitest', '2.4.4'
 end
 
 group :development do
