@@ -1,0 +1,5 @@
+language: ruby
+ruby:
+   - "2.6.0p0"
+script:
+    - "rails server"
