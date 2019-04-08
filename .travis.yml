@@ -1,12 +1,9 @@
 language: ruby
 rvm:
    - 2.6
-   - jruby
-   - trufflerby
-   - 2.6.0p0
 script:
-    - "rails test"
     - "rails server"
+    - "rails test"
 before_install:
     - gem update --system
     - gem --version
