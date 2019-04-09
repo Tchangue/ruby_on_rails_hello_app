@@ -1,6 +1,11 @@
 language: ruby
 rvm:
 - 2.6.1
+notifications:
+  email:
+    on_success: always
+    recipients:
+    - mauricejuniorimele@yahoo.fr
 script:
 - bundle install --jobs=3 --retry=3
 - bundle exec rake db:create
@@ -17,10 +22,11 @@ env:
 - tilt=1.3.3
 - tilt=master
 - CHEF_VERSION=14.3.37
+before_deploy: 
 deploy:
   provider: heroku
-  api_key:
-    secure: UZBUz1hkzs6DHnmI+lJhwGpXDJC8ARWC85upAqxiQAgxw2iuGmrayCZfavz7mWAOmCInt87tdVAUdcwRnxbNTS2DokDsRl9RDPpYteI+tha8YXvsQyGrImleF3cZ8OS1O9n35khCK/OF3CJvxH75ioNEsQSFDYEKJo3l8gP9LZ6khv3/sxTIfa7p+Zg8N2cFCuP24qO7T5k2Hll5kFKn+GmOu3KLRfG+LxSRLjjjt96/dc3plN6h9MdVTLZetM/E2rqxA0i8jqRNumvTB9qe3yWEO3fG2KgrdF/jF3bj519OQ94FRAsYHNllw8ttp1L2/nZD0yRnu9Y6D5ansfFkvWa8gZdAqVIZTiUbYSbxXb9KjZ55OwyA1Sd8xL9rfFUaz0wYkrfQjMHgHoGd46KNIMLOewdvC7iQEpwggItgw8fcxlMY6kgQSO7Jvz2vhverYwkpWf2CA39CpxPoGbEYP+Mvd6zQuDqLERsxqW0ju3KLF5sR9pMuyT3LUdvGFfw0YHLtrmpMJnUMHnRnNs5ZOcIhJRK++KS/xfBRHpjr3ocNIpj4q/JkFj6B/RRkAh+CSW9A0jPBnm5kkTQGESD2T+4sTPAIaPjbOKJoh6XnyZ57FthN8K+UANVsH4N1NXZUfIHDzCZOEFpRQhL9nK5iha+8hoZ37mx+MH7XMMgYwJI=
+  api-key:
+    secure: 7KRBeWv5+jJU8wshEoB/6z83oV/10Uluyl9BvQtIpHJ6elXqEClnH+XCcKRQnq5rvWnX3lNCfc/NtsMgdBWlQXdJyaO9fyEwCma+wo1j0lnAgXKEtMHE0crjvrMZAgAwGVIE2Xly41z8DKRDQqwtwRuiqC/aTM0k+r7gA3IJf2Zu5ERj1kUPyeWUoTWysW1oThPewFzEceCOmETztPlLjOeddndwA056bZwtZtG19QADJMalJ8snOtND5JaZLPX9z1F2Mbz5YE1J8qYT8eYB8ZfyfltLGJOy/eINZxZ8lnztic0Kx8zZ82yB6ZmeqWhuH9vuvSm7eEsF6Wq5OefzoiBHK0bMjVbbDyELfv6bY9sL7ZOL5VNKYfUncLkMHuDjyY5Hia+Dsd5Rd0Z1ODxmWg2tusA/9086T5/pchASGXJrufNJTj+0mQjj3aU0Wq311KxHA+dTevgtUKohinrpDu6VYcRT4FDknmqYK4SReSTnpZ+9uaSYySrq8ZKsgvb4Yge/d/3Wz7GQizw4WrCdF36mB6faLA1QlbZEyz/G2vmsJZLykq15/8ZpaNqh0A9uMVAJPe6iT23hIeuxPwmJLFZosD3/VeZR6HE4vzPItUpJo0fqNZQgf5/MnhpwDq6o4JwUdPjA8mgoEHOjEBzaotcjgMsZOQ6cnBF7xKHwJSI=
   app: bayano-rails-tutorial-hello
-  run: "rake db:migrate"
-
+  run: rake db:migrate
+after_deploy: 
