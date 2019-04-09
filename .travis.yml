@@ -26,7 +26,7 @@ before_deploy:
 deploy:
   provider: heroku
   api-key:
-    secure: 7KRBeWv5+jJU8wshEoB/6z83oV/10Uluyl9BvQtIpHJ6elXqEClnH+XCcKRQnq5rvWnX3lNCfc/NtsMgdBWlQXdJyaO9fyEwCma+wo1j0lnAgXKEtMHE0crjvrMZAgAwGVIE2Xly41z8DKRDQqwtwRuiqC/aTM0k+r7gA3IJf2Zu5ERj1kUPyeWUoTWysW1oThPewFzEceCOmETztPlLjOeddndwA056bZwtZtG19QADJMalJ8snOtND5JaZLPX9z1F2Mbz5YE1J8qYT8eYB8ZfyfltLGJOy/eINZxZ8lnztic0Kx8zZ82yB6ZmeqWhuH9vuvSm7eEsF6Wq5OefzoiBHK0bMjVbbDyELfv6bY9sL7ZOL5VNKYfUncLkMHuDjyY5Hia+Dsd5Rd0Z1ODxmWg2tusA/9086T5/pchASGXJrufNJTj+0mQjj3aU0Wq311KxHA+dTevgtUKohinrpDu6VYcRT4FDknmqYK4SReSTnpZ+9uaSYySrq8ZKsgvb4Yge/d/3Wz7GQizw4WrCdF36mB6faLA1QlbZEyz/G2vmsJZLykq15/8ZpaNqh0A9uMVAJPe6iT23hIeuxPwmJLFZosD3/VeZR6HE4vzPItUpJo0fqNZQgf5/MnhpwDq6o4JwUdPjA8mgoEHOjEBzaotcjgMsZOQ6cnBF7xKHwJSI=
+    secure: 9bcc17b5-9852-45c3-b1b7-0daf9f9f5273
   app: bayano-rails-tutorial-hello
   run: rake db:migrate
 after_deploy: 
