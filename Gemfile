@@ -20,6 +20,9 @@ gem 'sassc-rails', '>= 2.1.0'
 # travis
 gem 'travis'
 
+#kgio
+#gem 'kgio', '>= 2.11.2'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -55,6 +58,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'bcrypt', '~>3.1.11', platforms: [:ruby, :x64_mingw]
+  gem 'rspec-rails' , '~> 3.8'
 
 end
 
@@ -73,10 +77,10 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
-group :production do
-  gem 'unicorn'
-  gem 'newrelic_rpm'
-end
+#group :production do
+ # gem 'unicorn'
+ # gem 'newrelic_rpm'
+#end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
