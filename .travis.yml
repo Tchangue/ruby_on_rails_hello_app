@@ -1,20 +1,8 @@
 language: ruby
 rvm:
-   - 2.6
+  - 2.6.0
 script:
-    - "rails server"
-    - "rails test"
-before_install:
-    - gem update --system
-    - gem --version
-    - gem install bundler
-
-bundler_args: --without production
-env:
-  - "rack=1.3.4"
-  - "rack=master"
-  - "tilt=1.3.3"
-  - "tilt=master"
-  - CHEF_VERSION=14.3.37
-  - CHEF_VERSION=13.10.0
-  - CHEF_VERSION=12.22.5
+  — bundle install — jobs=3 — retry=3
+  — bundle exec rake db:create
+  — bundle exec rake db:migrate
+  — bundle exec rspec
