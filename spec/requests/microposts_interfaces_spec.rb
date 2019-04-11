@@ -1,5 +1,5 @@
-#require 'rails_helper'
-require 'spec_helper'
+require 'rails_helper'
+#require 'spec_helper'
 
 RSpec.describe "MicropostsInterfaces", type: :request do
   describe "GET /microposts_interfaces" do
