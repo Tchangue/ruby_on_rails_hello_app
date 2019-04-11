@@ -49,6 +49,10 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def profiles
+    render '_profile'
+  end
+
 
   private
 
