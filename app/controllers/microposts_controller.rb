@@ -19,8 +19,8 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
-  def interface
-    render '_interface'
+  def interfaces
+    render '_interfaces'
   end
 
   private
