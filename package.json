@@ -2,6 +2,7 @@
   "name": "ruby_on_rails_hello_app",
   "private": true,
   "dependencies": {
+    "imagemagick": "^0.1.3",
     "jquery": "^3.3.1"
   }
 }
