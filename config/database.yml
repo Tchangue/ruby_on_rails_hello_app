@@ -82,7 +82,6 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database:  bayano-rails-tutorial-hello-heroku_production
-  username: bayano-rails-tutorial-hello-postgres-heroku
-  password: <%= ENV['BAYANO_RAILS_TUTORIAL_HELLO_DATABASE_PASSWORD'] %>
+  #adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
+
