@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: postgresql-corrugated-95489
-  username: Junior Bayano
+  username: mauricejuniorimele@yahoo.fr
   password: <%= ENV['BAYANO_RAILS_TUTORIAL_HELLO_DATABASE_PASSWORD'] %>
