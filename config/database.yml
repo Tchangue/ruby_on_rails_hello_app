@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: postgresql-corrugated-95489
-  username: mauricejuniorimele@yahoo.fr
+  database:  bayano-rails-tutorial-hello-heroku_production
+  username: bayano-rails-tutorial-hello-postgres-heroku
   password: <%= ENV['BAYANO_RAILS_TUTORIAL_HELLO_DATABASE_PASSWORD'] %>
