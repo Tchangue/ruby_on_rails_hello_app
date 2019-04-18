@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: bayano-rails-tutorial-hello_production
-  username: bayano-rails-tutorial-hello
+  database: postgresql-corrugated-95489
+  username: Junior Bayano
   password: <%= ENV['BAYANO_RAILS_TUTORIAL_HELLO_DATABASE_PASSWORD'] %>

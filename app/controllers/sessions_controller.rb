@@ -28,3 +28,5 @@ class SessionsController < ApplicationController
   end
 
 end
+
+#application_mailer.rb
